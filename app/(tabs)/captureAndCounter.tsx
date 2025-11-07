@@ -5,7 +5,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { incrementBy, decrementBy } from "../store/index"
 
 export default function capturingTaps(){
-    const state = {}
     const counter: number = useSelector((state: any) => state.counter);
     const dispatch = useDispatch();
     const[count, setCount] = useState(0);

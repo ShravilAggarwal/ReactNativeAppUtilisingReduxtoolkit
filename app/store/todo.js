@@ -3,7 +3,6 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     todos: [{id: 1, 
         text: "This is an example todo. Feel free to delete it", 
-        completed: false,
     }]
 };
 
@@ -14,7 +13,7 @@ const todoSlice = createSlice({
         addTodo: (state,action) => {
             const todo = {
                 id: Date.now(),
-                text: action.payload
+                text: action.payload,
             };
             state.todos.push(todo);
         },
