@@ -1,6 +1,7 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
+    "allowJs": true, //add this line to include js files in a ts project
     "strict": true,
     "paths": {
       "@/*": [
