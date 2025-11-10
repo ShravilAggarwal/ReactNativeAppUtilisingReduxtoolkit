@@ -4,9 +4,8 @@ import { configureStore } from "@reduxjs/toolkit"
 
 const store = configureStore({
     reducer: {
-        counterReducers: counterReducers, 
-        todoSlice: todoSlice,
-        
+        counter: counterReducers, 
+        todo: todoSlice,
     }
 });
 

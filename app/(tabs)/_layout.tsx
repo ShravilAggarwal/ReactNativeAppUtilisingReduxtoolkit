@@ -33,13 +33,6 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
         }}
       />
-      <Tabs.Screen 
-        name="boxes"
-        options={{
-          title: 'Boxes',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
-        }}
-      />
       <Tabs.Screen
         name="phoneDirectory"
         options={{
@@ -51,6 +44,13 @@ export default function TabLayout() {
         name = "todos"
         options={{
           title: 'Tasks',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />
+        }}
+      />
+      <Tabs.Screen 
+        name = "posts"
+        options={{
+          title: 'Posts',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />
         }}
       />

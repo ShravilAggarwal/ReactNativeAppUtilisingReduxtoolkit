@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Text, StyleSheet, TouchableOpacity, Alert, View } from "react-native"
 import NavigationBar from "../navigationBar";
+import store from "../store/store";
 import { useSelector, useDispatch } from "react-redux";
 import { incrementBy, decrementBy } from "../store/index"
 
 export default function capturingTaps(){
-    const counter: number = useSelector((state: any) => state.counter);
+    const counter: number = useSelector((state: any) => state.counter.counter);
     const dispatch = useDispatch();
     const[count, setCount] = useState(0);
     return(
