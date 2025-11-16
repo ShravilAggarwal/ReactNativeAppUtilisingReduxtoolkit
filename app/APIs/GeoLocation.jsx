@@ -1,6 +1,9 @@
 import React from "react";
 import { Image } from "react-native";
-const API_KEY = "YOUR_API_KEY";
+
+/*go to myprojects.geoapify.com and create an account 
+then use the map tiles (static map api) for free (1 million tokens/mo)*/
+const API_KEY = "YOUR_API_KEY"; 
 
 const MapImage = ({ lat, lng }) => {
   const zoom = 7;
