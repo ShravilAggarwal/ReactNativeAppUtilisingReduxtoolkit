@@ -1,8 +1,7 @@
 import { useState } from "react";
-import {View, Text, FlatList, TouchableOpacity, Modal, TextInput} from "react-native";
-import { useSelector, useDispatch } from "react-redux";
+import { FlatList, Modal, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { useDispatch, useSelector } from "react-redux";
 
-import store from "../store/store";
 import { addTodo, removeTodo } from "../store/todo";
 
 import NavigationBar from "../navigationBar";
@@ -11,11 +10,10 @@ import NavigationBar from "../navigationBar";
 export default function tasks(){
     const[showModal, setShowModal] = useState(false);
     const[input, setInput] = useState('');
-    const todos: any = useSelector((state: any) => state.todoSlice.todos);
+    const todos: any = useSelector((state: any) => state.todo.todos);
     const dispatch = useDispatch();
     const handleAdd = () => {
         setShowModal(true);
-        console.log("hello")
     };
     const handleSubmit = () => {
         setShowModal(false);

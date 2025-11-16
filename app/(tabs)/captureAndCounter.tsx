@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { Text, StyleSheet, TouchableOpacity, Alert, View } from "react-native"
+import { Alert, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { useDispatch, useSelector } from "react-redux";
 import NavigationBar from "../navigationBar";
-import store from "../store/store";
-import { useSelector, useDispatch } from "react-redux";
-import { incrementBy, decrementBy } from "../store/index"
+import { decrementBy, incrementBy } from "../store/index";
 
 export default function capturingTaps(){
     const counter: number = useSelector((state: any) => state.counter.counter);
@@ -11,9 +10,6 @@ export default function capturingTaps(){
     const[count, setCount] = useState(0);
     return(
         <NavigationBar title = "Counter and Capture">
-            <TouchableOpacity onPress={()=>Alert.alert("Warning")}>
-                <Text style={styles.button}>Don't press me</Text>
-            </TouchableOpacity>
             <View style={{flexDirection: "row", justifyContent: "space-around", alignItems: "center", marginTop: 20, backgroundColor: "transparent"}}>
             <TouchableOpacity onPress={()=>{if(counter===0) return; dispatch(decrementBy(1));}}>
                 <Text style={styles.btn}>-</Text>
